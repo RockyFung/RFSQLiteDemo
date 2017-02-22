@@ -15,6 +15,10 @@
 		5C8618A61E5D3A1E002481C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8618A41E5D3A1E002481C0 /* LaunchScreen.storyboard */; };
 		5C8618B11E5D3A1E002481C0 /* RFSQLiteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8618B01E5D3A1E002481C0 /* RFSQLiteDemoTests.m */; };
 		5C8618BC1E5D3A1E002481C0 /* RFSQLiteDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8618BB1E5D3A1E002481C0 /* RFSQLiteDemoUITests.m */; };
+		5C8618CE1E5D3CC7002481C0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8618CD1E5D3CC7002481C0 /* libsqlite3.tbd */; };
+		5C8618D41E5D3DF8002481C0 /* RFSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8618D31E5D3DF8002481C0 /* RFSQLiteManager.m */; };
+		5C8618D71E5D44DF002481C0 /* sqliteDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5C8618D61E5D44DF002481C0 /* sqliteDB.sqlite */; };
+		5C8618DA1E5D4809002481C0 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8618D91E5D4809002481C0 /* StudentModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,12 @@
 		5C8618B71E5D3A1E002481C0 /* RFSQLiteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFSQLiteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8618BB1E5D3A1E002481C0 /* RFSQLiteDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFSQLiteDemoUITests.m; sourceTree = "<group>"; };
 		5C8618BD1E5D3A1E002481C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C8618CD1E5D3CC7002481C0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5C8618D21E5D3DF8002481C0 /* RFSQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSQLiteManager.h; sourceTree = "<group>"; };
+		5C8618D31E5D3DF8002481C0 /* RFSQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSQLiteManager.m; sourceTree = "<group>"; };
+		5C8618D61E5D44DF002481C0 /* sqliteDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sqliteDB.sqlite; sourceTree = "<group>"; };
+		5C8618D81E5D4809002481C0 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
+		5C8618D91E5D4809002481C0 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8618CE1E5D3CC7002481C0 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,7 @@
 				5C8618AF1E5D3A1E002481C0 /* RFSQLiteDemoTests */,
 				5C8618BA1E5D3A1E002481C0 /* RFSQLiteDemoUITests */,
 				5C8618941E5D3A1E002481C0 /* Products */,
+				5C8618CC1E5D3CC7002481C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +113,17 @@
 		5C8618951E5D3A1E002481C0 /* RFSQLiteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5C8618D11E5D3DDC002481C0 /* RFSQLite */,
 				5C8618991E5D3A1E002481C0 /* AppDelegate.h */,
 				5C86189A1E5D3A1E002481C0 /* AppDelegate.m */,
 				5C86189C1E5D3A1E002481C0 /* ViewController.h */,
 				5C86189D1E5D3A1E002481C0 /* ViewController.m */,
+				5C8618D81E5D4809002481C0 /* StudentModel.h */,
+				5C8618D91E5D4809002481C0 /* StudentModel.m */,
 				5C86189F1E5D3A1E002481C0 /* Main.storyboard */,
 				5C8618A21E5D3A1E002481C0 /* Assets.xcassets */,
 				5C8618A41E5D3A1E002481C0 /* LaunchScreen.storyboard */,
+				5C8618D61E5D44DF002481C0 /* sqliteDB.sqlite */,
 				5C8618A71E5D3A1E002481C0 /* Info.plist */,
 				5C8618961E5D3A1E002481C0 /* Supporting Files */,
 			);
@@ -138,6 +154,23 @@
 				5C8618BD1E5D3A1E002481C0 /* Info.plist */,
 			);
 			path = RFSQLiteDemoUITests;
+			sourceTree = "<group>";
+		};
+		5C8618CC1E5D3CC7002481C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C8618CD1E5D3CC7002481C0 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C8618D11E5D3DDC002481C0 /* RFSQLite */ = {
+			isa = PBXGroup;
+			children = (
+				5C8618D21E5D3DF8002481C0 /* RFSQLiteManager.h */,
+				5C8618D31E5D3DF8002481C0 /* RFSQLiteManager.m */,
+			);
+			path = RFSQLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +285,7 @@
 				5C8618A61E5D3A1E002481C0 /* LaunchScreen.storyboard in Resources */,
 				5C8618A31E5D3A1E002481C0 /* Assets.xcassets in Resources */,
 				5C8618A11E5D3A1E002481C0 /* Main.storyboard in Resources */,
+				5C8618D71E5D44DF002481C0 /* sqliteDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C86189E1E5D3A1E002481C0 /* ViewController.m in Sources */,
+				5C8618D41E5D3DF8002481C0 /* RFSQLiteManager.m in Sources */,
+				5C8618DA1E5D4809002481C0 /* StudentModel.m in Sources */,
 				5C86189B1E5D3A1E002481C0 /* AppDelegate.m in Sources */,
 				5C8618981E5D3A1E002481C0 /* main.m in Sources */,
 			);
